@@ -1,0 +1,13 @@
+/run/initialize
+
+/process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year
+
+/tracking/verbose 1
+
+/tracking/storeTrajectory 1
+
+/control/execute vis.mac
+
+/run/beamOn 8
+
+exit
