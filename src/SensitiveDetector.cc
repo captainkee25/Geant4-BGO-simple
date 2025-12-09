@@ -17,15 +17,17 @@ void SensitiveDetector::Initialize(G4HCofThisEvent *)
 
 G4bool SensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist)
 {
-    G4StepPoint *preStepPoint = aStep->GetPreStepPoint(); //when the photon enters the detector 
+    // per step, get the total energy deposit, and assign it to the crystal that's being stepped in
+    // energy deposit accumulated and saved per event 
+    G4StepPoint *preStepPoint = aStep->GetPreStepPoint();  
     G4double energyDeposited = aStep->GetTotalEnergyDeposit();
 
     int copyNo = preStepPoint->GetTouchable()->GetCopyNumber();
 
-    if(fEntryTime[copyNo] < 0.)
-    fEntryTime[copyNo] = preStepPoint->GetGlobalTime();
+    if(fEntryTime[copyNo-1] < 0.)
+    fEntryTime[copyNo-1] = preStepPoint->GetGlobalTime();
 
-    fEnergyDeposited[copyNo] += energyDeposited;
+    fEnergyDeposited[copyNo-1] += energyDeposited;
 
     return true;
 }
@@ -35,19 +37,19 @@ void SensitiveDetector::EndOfEvent(G4HCofThisEvent *)
 {
     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
     G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
-    for(int i=1; i<=3; ++i) 
+    for(int i=0; i<3; ++i) 
     {
         G4double E = fEnergyDeposited[i];
         G4double t = fEntryTime[i];
 
         analysisManager->FillNtupleIColumn(0, eventID);
-        analysisManager->FillNtupleIColumn(1, i);          
+        analysisManager->FillNtupleIColumn(1, i+1);          
         analysisManager->FillNtupleDColumn(2, E);
         analysisManager->FillNtupleDColumn(3, t);  
-        analysisManager->AddNtupleRow();        // entry time after decay start
+        analysisManager->AddNtupleRow();       
+        
+        if (fEnergyDeposited[i] > 0.)  // only plot hits
+            analysisManager->FillH1(i, fEnergyDeposited[i]);
+        
     }   
-
-    for(int i=1; i<=3; ++i) {
-        analysisManager->FillH1(i-1, fEnergyDeposited[i]);  // IDs: 0,1,2
-    }
 }

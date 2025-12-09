@@ -47,7 +47,7 @@ G4LogicalVolume* DetectorConstruction::BuildCrystal(G4LogicalVolume* motherLV, c
         "BGO",
         motherLV,
         false,
-        0,
+        copyNo,
         checkOverlaps
     );
 
@@ -69,7 +69,7 @@ G4LogicalVolume* DetectorConstruction::BuildCrystal(G4LogicalVolume* motherLV, c
         "Wrapping",
         fCrystals_LV,
         false,
-        copyNo,
+        0,
         checkOverlaps
     );
 

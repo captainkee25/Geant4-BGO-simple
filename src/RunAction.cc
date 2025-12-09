@@ -7,7 +7,7 @@ RunAction::RunAction()
     for (int i = 0; i<3;++i)
     {
         G4String hname = "Edep BGO" + std::to_string(i+1); 
-        analysisManager->CreateH1(hname, "Energy deposit", 200, 0., 2 * MeV);
+        analysisManager->CreateH1(hname, "Energy deposit", 4096, 0., 2 * MeV);
     }
 
     analysisManager->CreateNtuple("BGO", "BGO crystals");

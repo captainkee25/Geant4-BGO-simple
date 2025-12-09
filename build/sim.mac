@@ -4,10 +4,10 @@
 
 #/tracking/verbose 1
 
-/tracking/storeTrajectory 1
+#/tracking/storeTrajectory 1
 
 #/control/execute vis.mac
 
-/run/beamOn 10000
+/run/beamOn 420000
 
 exit
