@@ -744,6 +744,84 @@ CMakeFiles/main.dir/src/main.cc.o: \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UnitsTable.icc \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4VisAttributes.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4Colour.hh \
+ /home/kumesh/geant4_projects/BGO_simple/include/SensitiveDetector.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VSensitiveDetector.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4CollectionNameVector.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VReadOutGeometry.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4SensitiveVolumeList.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VSDFilter.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Step.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4StepPoint.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Track.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4HCofThisEvent.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4RunManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4ToolsAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisManagerState.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisVerbose.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisUtilities.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VTBaseHnManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4HnInformation.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4BinScheme.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Fcn.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VAnalysisManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4HnManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4BaseAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4NtupleBookingManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/ntuple_booking \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/cids \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/cid \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/typedefs \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/forit \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4NtupleBookingManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VNtupleManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VFileManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4BaseFileManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VTHnFileManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4TH1ToolsManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4THnToolsManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4THnManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4THnManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4THnMessenger.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4THnToolsManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4THnMessenger.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Tokenizer.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4TH2ToolsManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4TH3ToolsManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4TP1ToolsManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4TP2ToolsManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/h1d \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/h1 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/b1 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/base_histo \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/histo_data \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/axes \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/axis \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/eqT \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/h2d \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/h2 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/b2 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/h3d \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/h3 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/b3 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/p1d \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/p1 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/profile_data \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/p2d \
+ /opt/geant4/geant4-11-2-0/include/Geant4/tools/histo/p2 \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4ToolsAnalysisManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericAnalysisManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericFileManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericFileManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4SDManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4HCtable.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4SDStructure.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VSensitiveDetector.hh \
  /home/kumesh/geant4_projects/BGO_simple/include/ActionInit.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4VUserActionInitialization.hh \
- /home/kumesh/geant4_projects/BGO_simple/include/ParticleSource.hh
+ /home/kumesh/geant4_projects/BGO_simple/include/ParticleSource.hh \
+ /home/kumesh/geant4_projects/BGO_simple/include/RunAction.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4UserRunAction.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Run.hh

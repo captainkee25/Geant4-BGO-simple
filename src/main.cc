@@ -15,9 +15,8 @@ int main(int argc,char** argv)
 {
     G4MTRunManager *runManager = new G4MTRunManager;
 
-    runManager->SetUserInitialization(new DetectorConstruction());
     runManager->SetUserInitialization(new PhysicsList());
-    
+    runManager->SetUserInitialization(new DetectorConstruction());
     runManager->SetUserInitialization(new ActionInit());
     
 

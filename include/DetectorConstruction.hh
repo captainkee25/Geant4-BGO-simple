@@ -20,6 +20,11 @@
 #include "G4VisAttributes.hh"
 #include "G4Colour.hh"
 
+//For sensitive detection BGOs
+#include "SensitiveDetector.hh"
+#include "G4SDManager.hh"
+
+
 class DetectorConstruction: public G4VUserDetectorConstruction
 {
     public:
@@ -34,7 +39,7 @@ class DetectorConstruction: public G4VUserDetectorConstruction
         void DefineVolumes();
         G4LogicalVolume* BuildCrystal(G4LogicalVolume* motherLV,
             const G4ThreeVector& pos,
-            G4RotationMatrix* rot);
+            G4RotationMatrix* rot,int copyNo);
     
         G4LogicalVolume* crystal1;
         G4LogicalVolume* crystal2;
@@ -46,6 +51,8 @@ class DetectorConstruction: public G4VUserDetectorConstruction
         G4Material* plastic;
         
         G4VPhysicalVolume* physWorld;
+
+        virtual void ConstructSDandField();
 
 };
 

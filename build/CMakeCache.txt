@@ -308,6 +308,111 @@ Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 //The directory containing a CMake configuration file for Qt5.
 Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
+//Path to a library.
+ROOT_Core_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libCore.so
+
+//The directory containing a CMake configuration file for ROOT.
+ROOT_DIR:PATH=/opt/root/root-6-32-04/cmake
+
+//Path to a library.
+ROOT_Gpad_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libGpad.so
+
+//Path to a library.
+ROOT_Graf3d_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libGraf3d.so
+
+//Path to a library.
+ROOT_Graf_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libGraf.so
+
+//Path to a library.
+ROOT_Hist_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libHist.so
+
+//Path to a library.
+ROOT_Imt_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libImt.so
+
+//Path to a library.
+ROOT_MathCore_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libMathCore.so
+
+//Path to a library.
+ROOT_Matrix_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libMatrix.so
+
+//Path to a library.
+ROOT_MultiProc_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libMultiProc.so
+
+//Path to a library.
+ROOT_Net_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libNet.so
+
+//Path to a library.
+ROOT_Physics_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libPhysics.so
+
+//Path to a library.
+ROOT_Postscript_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libPostscript.so
+
+//Path to a library.
+ROOT_RIO_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libRIO.so
+
+//Path to a library.
+ROOT_ROOTDataFrame_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libROOTDataFrame.so
+
+//Path to a library.
+ROOT_ROOTVecOps_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libROOTVecOps.so
+
+//Path to a library.
+ROOT_Rint_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libRint.so
+
+//Path to a library.
+ROOT_Thread_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libThread.so
+
+//Path to a library.
+ROOT_TreePlayer_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libTreePlayer.so
+
+//Path to a library.
+ROOT_Tree_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libTree.so
+
+//Path to a program.
+ROOT_genmap_CMD:FILEPATH=ROOT_genmap_CMD-NOTFOUND
+
+//Path to a program.
+ROOT_genreflex_CMD:FILEPATH=/opt/root/root-6-32-04/bin/genreflex
+
+//Path to a program.
+ROOT_hadd_CMD:FILEPATH=/opt/root/root-6-32-04/bin/hadd
+
+//Path to a program.
+ROOT_root_CMD:FILEPATH=/opt/root/root-6-32-04/bin/root
+
+//Path to a program.
+ROOT_rootbrowse_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootbrowse
+
+//Path to a program.
+ROOT_rootcint_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootcint
+
+//Path to a program.
+ROOT_rootcling_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootcling
+
+//Path to a program.
+ROOT_rootcp_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootcp
+
+//Path to a program.
+ROOT_rootdraw_CMD:FILEPATH=ROOT_rootdraw_CMD-NOTFOUND
+
+//Path to a program.
+ROOT_rootls_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootls
+
+//Path to a program.
+ROOT_rootmkdir_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootmkdir
+
+//Path to a program.
+ROOT_rootmv_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootmv
+
+//Path to a program.
+ROOT_rootrm_CMD:FILEPATH=/opt/root/root-6-32-04/bin/rootrm
+
+//Path to a file.
+VDT_INCLUDE_DIR:PATH=/opt/root/root-6-32-04/include
+
+//Path to a library.
+VDT_LIBRARY:FILEPATH=/opt/root/root-6-32-04/lib/libvdt.so
+
 //Path to a file.
 X11_ICE_INCLUDE_PATH:PATH=/usr/include
 
@@ -756,6 +861,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Geant4:INTERNAL=[/opt/geant4/geant4-11-2-0/lib/cmak
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding Vdt
+FIND_PACKAGE_MESSAGE_DETAILS_Vdt:INTERNAL=[/opt/root/root-6-32-04/include][/opt/root/root-6-32-04/lib/libvdt.so][v0.4()]
 //Details about finding X11
 FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libX11.so][c ][v()]
 //Details about finding XercesC
@@ -864,6 +971,70 @@ PKG_FONTCONFIG_fontconfig_INCLUDEDIR:INTERNAL=
 PKG_FONTCONFIG_fontconfig_LIBDIR:INTERNAL=
 PKG_FONTCONFIG_fontconfig_PREFIX:INTERNAL=
 PKG_FONTCONFIG_fontconfig_VERSION:INTERNAL=
+//ADVANCED property for variable: ROOT_Core_LIBRARY
+ROOT_Core_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Gpad_LIBRARY
+ROOT_Gpad_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Graf3d_LIBRARY
+ROOT_Graf3d_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Graf_LIBRARY
+ROOT_Graf_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Hist_LIBRARY
+ROOT_Hist_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Imt_LIBRARY
+ROOT_Imt_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_MathCore_LIBRARY
+ROOT_MathCore_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Matrix_LIBRARY
+ROOT_Matrix_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_MultiProc_LIBRARY
+ROOT_MultiProc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Net_LIBRARY
+ROOT_Net_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Physics_LIBRARY
+ROOT_Physics_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Postscript_LIBRARY
+ROOT_Postscript_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_RIO_LIBRARY
+ROOT_RIO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_ROOTDataFrame_LIBRARY
+ROOT_ROOTDataFrame_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_ROOTVecOps_LIBRARY
+ROOT_ROOTVecOps_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Rint_LIBRARY
+ROOT_Rint_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Thread_LIBRARY
+ROOT_Thread_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_TreePlayer_LIBRARY
+ROOT_TreePlayer_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_Tree_LIBRARY
+ROOT_Tree_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_genreflex_CMD
+ROOT_genreflex_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_hadd_CMD
+ROOT_hadd_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_root_CMD
+ROOT_root_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootbrowse_CMD
+ROOT_rootbrowse_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootcint_CMD
+ROOT_rootcint_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootcling_CMD
+ROOT_rootcling_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootcp_CMD
+ROOT_rootcp_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootls_CMD
+ROOT_rootls_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootmkdir_CMD
+ROOT_rootmkdir_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootmv_CMD
+ROOT_rootmv_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ROOT_rootrm_CMD
+ROOT_rootrm_CMD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VDT_INCLUDE_DIR
+VDT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VDT_LIBRARY
+VDT_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_INCLUDE_PATH
 X11_ICE_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_LIB

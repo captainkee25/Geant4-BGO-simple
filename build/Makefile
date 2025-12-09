@@ -225,6 +225,30 @@ src/PhysicsList.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/PhysicsList.cc.s
 .PHONY : src/PhysicsList.cc.s
 
+src/RunAction.o: src/RunAction.cc.o
+.PHONY : src/RunAction.o
+
+# target to build an object file
+src/RunAction.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/RunAction.cc.o
+.PHONY : src/RunAction.cc.o
+
+src/RunAction.i: src/RunAction.cc.i
+.PHONY : src/RunAction.i
+
+# target to preprocess a source file
+src/RunAction.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/RunAction.cc.i
+.PHONY : src/RunAction.cc.i
+
+src/RunAction.s: src/RunAction.cc.s
+.PHONY : src/RunAction.s
+
+# target to generate assembly for a file
+src/RunAction.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/RunAction.cc.s
+.PHONY : src/RunAction.cc.s
+
 src/SensitiveDetector.o: src/SensitiveDetector.cc.o
 .PHONY : src/SensitiveDetector.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... src/PhysicsList.o"
 	@echo "... src/PhysicsList.i"
 	@echo "... src/PhysicsList.s"
+	@echo "... src/RunAction.o"
+	@echo "... src/RunAction.i"
+	@echo "... src/RunAction.s"
 	@echo "... src/SensitiveDetector.o"
 	@echo "... src/SensitiveDetector.i"
 	@echo "... src/SensitiveDetector.s"

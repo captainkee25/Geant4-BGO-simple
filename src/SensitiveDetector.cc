@@ -1,56 +1,53 @@
-// #include "SensitiveDetector.hh"
+#include "SensitiveDetector.hh"
 
-// SensitiveDetector::SensitiveDetector(G4String name):G4VSensitiveDetector(name)
-// {
-//     // fTotalEnergyDeposited = 0.;
-// }
+SensitiveDetector::SensitiveDetector(G4String name):G4VSensitiveDetector(name)
+{
+}
 
-// SensitiveDetector::~SensitiveDetector(){}
+SensitiveDetector::~SensitiveDetector(){}
 
-// G4bool SensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist)
-// {
-//     G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+void SensitiveDetector::Initialize(G4HCofThisEvent *)
+{
+    for(int i=0; i<3; ++i)
+    {
+        fEnergyDeposited[i] = 0.;
+        fEntryTime[i] = -1.;  // initialize with -1 to indicate not yet hit
+    }
+}
 
-//     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
+G4bool SensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist)
+{
+    G4StepPoint *preStepPoint = aStep->GetPreStepPoint(); //when the photon enters the detector 
+    G4double energyDeposited = aStep->GetTotalEnergyDeposit();
 
-//     G4StepPoint *preStepPoint = aStep->GetPreStepPoint();
+    int copyNo = preStepPoint->GetTouchable()->GetCopyNumber();
 
-//     G4double fGlobalTime = preStepPoint->GetGlobalTime();
-//     G4ThreeVector posPhoton = preStepPoint->GetPosition();
-//     G4ThreeVector momPhoton = preStepPoint->GetMomentum();
+    if(fEntryTime[copyNo] < 0.)
+    fEntryTime[copyNo] = preStepPoint->GetGlobalTime();
 
-//     G4double fMomPhotonMag = momPhoton.mag();
+    fEnergyDeposited[copyNo] += energyDeposited;
 
-//     G4double fWlen = (1.239841939 * eV / fMomPhotonMag) * 1E+03;
+    return true;
+}
 
-//     analysisManager->FillNtupleIColumn(0, 0, eventID);
-//     analysisManager->FillNtupleDColumn(0, 1, posPhoton[0]);
-//     analysisManager->FillNtupleDColumn(0, 2, posPhoton[1]);
-//     analysisManager->FillNtupleDColumn(0, 3, posPhoton[2]);
-//     analysisManager->FillNtupleDColumn(0, 4, fGlobalTime);
-//     analysisManager->FillNtupleDColumn(0, 5, fWlen);
-//     analysisManager->AddNtupleRow(0);
 
-//     G4double energyDeposited = aStep->GetTotalEnergyDeposit();
+void SensitiveDetector::EndOfEvent(G4HCofThisEvent *)
+{
+    G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
+    G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+    for(int i=1; i<=3; ++i) 
+    {
+        G4double E = fEnergyDeposited[i];
+        G4double t = fEntryTime[i];
 
-//     if (energyDeposited > 0)
-//     {
-//         fTotalEnergyDeposited += energyDeposited;
-//     }
+        analysisManager->FillNtupleIColumn(0, eventID);
+        analysisManager->FillNtupleIColumn(1, i);          
+        analysisManager->FillNtupleDColumn(2, E);
+        analysisManager->FillNtupleDColumn(3, t);  
+        analysisManager->AddNtupleRow();        // entry time after decay start
+    }   
 
-//     return true;
-// }
-
-// // void PMSensitiveDetector::Initialize(G4HCofThisEvent *)
-// // {
-// //     fTotalEnergyDeposited = 0.;
-// // }
-
-// // void PMSensitiveDetector::EndOfEvent(G4HCofThisEvent *)
-// // {
-// //     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
-
-// //     analysisManager->FillH1(0, fTotalEnergyDeposited);
-
-// //     G4cout << "Deposited energy: " << fTotalEnergyDeposited << G4endl;
-// // }
+    for(int i=1; i<=3; ++i) {
+        analysisManager->FillH1(i-1, fEnergyDeposited[i]);  // IDs: 0,1,2
+    }
+}

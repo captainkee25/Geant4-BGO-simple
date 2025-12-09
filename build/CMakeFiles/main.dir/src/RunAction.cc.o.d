@@ -1,14 +1,8 @@
-CMakeFiles/main.dir/src/ActionInit.cc.o: \
- /home/kumesh/geant4_projects/BGO_simple/src/ActionInit.cc \
+CMakeFiles/main.dir/src/RunAction.cc.o: \
+ /home/kumesh/geant4_projects/BGO_simple/src/RunAction.cc \
  /usr/include/stdc-predef.h \
- /home/kumesh/geant4_projects/BGO_simple/include/ActionInit.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4VUserActionInitialization.hh \
- /home/kumesh/geant4_projects/BGO_simple/include/ParticleSource.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleDefinition.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4PDefManager.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4AutoLock.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4Threading.hh \
+ /home/kumesh/geant4_projects/BGO_simple/include/RunAction.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4UserRunAction.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4Types.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4GlobalConfig.hh \
  /usr/include/c++/12/complex \
@@ -184,16 +178,55 @@ CMakeFiles/main.dir/src/ActionInit.cc.o: \
  /usr/include/c++/12/bits/istream.tcc \
  /usr/include/c++/12/bits/sstream.tcc \
  /opt/geant4/geant4-11-2-0/include/Geant4/tls.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/globals.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ios.hh \
- /usr/include/c++/12/iostream /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Run.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Profiler.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Profiler.icc \
+ /usr/include/c++/12/functional /usr/include/c++/12/tuple \
+ /usr/include/c++/12/bits/uses_allocator.h \
+ /usr/include/c++/12/bits/std_function.h \
+ /usr/include/c++/12/unordered_map \
+ /usr/include/c++/12/ext/aligned_buffer.h \
+ /usr/include/c++/12/bits/hashtable.h \
+ /usr/include/c++/12/bits/hashtable_policy.h \
+ /usr/include/c++/12/bits/enable_special_members.h \
+ /usr/include/c++/12/bits/node_handle.h \
+ /usr/include/c++/12/bits/unordered_map.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/stl_tempbuf.h \
  /usr/include/c++/12/bits/uniform_int_dist.h \
+ /opt/geant4/geant4-11-2-0/include/Geant4/PTL/Globals.hh \
+ /usr/include/c++/12/algorithm \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
+ /opt/geant4/geant4-11-2-0/include/Geant4/PTL/Types.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/PTL/Utility.hh \
+ /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/iostream \
+ /usr/include/c++/12/map /usr/include/c++/12/bits/stl_tree.h \
+ /usr/include/c++/12/bits/stl_map.h \
+ /usr/include/c++/12/bits/stl_multimap.h /usr/include/c++/12/mutex \
+ /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
+ /usr/include/c++/12/bits/parse_numbers.h \
+ /usr/include/c++/12/bits/std_mutex.h \
+ /usr/include/c++/12/bits/unique_lock.h /usr/include/c++/12/set \
+ /usr/include/c++/12/bits/stl_set.h \
+ /usr/include/c++/12/bits/stl_multiset.h /usr/include/c++/12/utility \
+ /usr/include/c++/12/bits/stl_relops.h \
+ /opt/geant4/geant4-11-2-0/include/Geant4/globals.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4ios.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4String.hh \
  /usr/include/c++/12/cstring /usr/include/string.h /usr/include/strings.h \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4String.icc \
@@ -210,26 +243,15 @@ CMakeFiles/main.dir/src/ActionInit.cc.o: \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4Exception.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4ExceptionSeverity.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4EnvironmentUtils.hh \
- /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
- /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
- /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/12/bits/codecvt.h \
- /usr/include/c++/12/bits/locale_facets_nonio.tcc \
- /usr/include/c++/12/bits/locale_conv.h \
- /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/map \
- /usr/include/c++/12/bits/stl_tree.h \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/stl_map.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/stl_multimap.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/mutex \
- /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
- /usr/include/c++/12/bits/parse_numbers.h \
- /usr/include/c++/12/bits/std_mutex.h \
- /usr/include/c++/12/bits/unique_lock.h /usr/include/c++/12/chrono \
- /usr/include/c++/12/condition_variable \
+ /usr/include/c++/12/cstddef \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4ToolsAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4VAnalysisManager.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisManagerState.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisVerbose.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4Threading.hh \
+ /usr/include/c++/12/chrono /usr/include/c++/12/condition_variable \
  /usr/include/c++/12/bits/shared_ptr.h \
  /usr/include/c++/12/bits/shared_ptr_base.h \
  /usr/include/c++/12/bits/allocated_ptr.h \
@@ -238,61 +260,8 @@ CMakeFiles/main.dir/src/ActionInit.cc.o: \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/bits/atomic_futex.h /usr/include/c++/12/atomic \
- /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/bits/std_thread.h /usr/include/c++/12/thread \
- /usr/include/c++/12/bits/this_thread_sleep.h /usr/include/c++/12/vector \
- /usr/include/c++/12/bits/stl_uninitialized.h \
- /usr/include/c++/12/bits/stl_vector.h \
- /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc \
- /opt/geant4/geant4-11-2-0/include/Geant4/pwdefs.hh \
- /usr/include/c++/12/stdlib.h \
- /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Units/PhysicalConstants.h \
- /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Units/SystemOfUnits.h \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleDefinition.icc \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleGun.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4VPrimaryGenerator.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ThreeVector.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Vector/ThreeVector.h \
- /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Utility/defs.h \
- /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Vector/ThreeVector.icc \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleDefinition.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4PrimaryVertex.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4Allocator.hh \
- /usr/include/c++/12/cstddef \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4AllocatorPool.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4PrimaryParticle.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleMomentum.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleTable.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleTableIterator.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleTable.icc \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4SystemOfUnits.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4IonTable.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4Ions.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ParticleTable.hh \
- /home/kumesh/geant4_projects/BGO_simple/include/RunAction.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4UserRunAction.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4Run.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4Profiler.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4Profiler.icc \
- /usr/include/c++/12/functional /usr/include/c++/12/unordered_map \
- /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h \
- /usr/include/c++/12/bits/enable_special_members.h \
- /usr/include/c++/12/bits/unordered_map.h /usr/include/c++/12/array \
- /usr/include/c++/12/compare \
- /opt/geant4/geant4-11-2-0/include/Geant4/PTL/Globals.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/PTL/Types.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/PTL/Utility.hh \
- /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
- /usr/include/c++/12/bits/stl_multiset.h /usr/include/c++/12/utility \
- /usr/include/c++/12/bits/stl_relops.h \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisManager.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericAnalysisManager.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4ToolsAnalysisManager.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4VAnalysisManager.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisManagerState.hh \
- /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisVerbose.hh \
+ /usr/include/c++/12/bits/this_thread_sleep.h \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4AnalysisUtilities.hh \
  /usr/include/c++/12/memory \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
@@ -325,11 +294,16 @@ CMakeFiles/main.dir/src/ActionInit.cc.o: \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4THnToolsManager.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4THnManager.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4THnManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4AutoLock.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4THnMessenger.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UImessenger.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UIdirectory.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UIcommand.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4ApplicationState.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4ThreeVector.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Vector/ThreeVector.h \
+ /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Utility/defs.h \
+ /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Vector/ThreeVector.icc \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UIparameter.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UItokenNum.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4THnToolsManager.icc \
@@ -362,5 +336,7 @@ CMakeFiles/main.dir/src/ActionInit.cc.o: \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericAnalysisManager.icc \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericFileManager.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4GenericFileManager.icc \
+ /opt/geant4/geant4-11-2-0/include/Geant4/G4SystemOfUnits.hh \
+ /opt/geant4/geant4-11-2-0/include/Geant4/CLHEP/Units/SystemOfUnits.h \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UnitsTable.hh \
  /opt/geant4/geant4-11-2-0/include/Geant4/G4UnitsTable.icc

@@ -8,7 +8,8 @@ find_package(Geant4 REQUIRED ui_all vis_all)
 include(${Geant4_USE_FILE}) 
 
 #Add root and GSL (GNU scientific library for saving and plotting)
-#find_package(ROOT REQUIRED COMPONENTS Core RIO Hist etc.)
+find_package(ROOT REQUIRED COMPONENTS Core RIO Hist)
+include(${ROOT_USE_FILE})
 #find_package(GSL REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)

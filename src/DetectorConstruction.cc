@@ -18,7 +18,7 @@ void DetectorConstruction::DefineMaterials()
 }
 
 
-G4LogicalVolume* DetectorConstruction::BuildCrystal(G4LogicalVolume* motherLV, const G4ThreeVector& pos, G4RotationMatrix* rot)
+G4LogicalVolume* DetectorConstruction::BuildCrystal(G4LogicalVolume* motherLV, const G4ThreeVector& pos, G4RotationMatrix* rot, int copyNo)
 {
     G4bool checkOverlaps = true;
     // Crystal dimensions
@@ -69,7 +69,7 @@ G4LogicalVolume* DetectorConstruction::BuildCrystal(G4LogicalVolume* motherLV, c
         "Wrapping",
         fCrystals_LV,
         false,
-        0,
+        copyNo,
         checkOverlaps
     );
 
@@ -95,9 +95,9 @@ void DetectorConstruction::DefineVolumes()
     rotMid->rotateY(-90*deg);
     rotMid->rotateZ(-30*deg);
 
-    crystal1 = BuildCrystal(logicalWorld, G4ThreeVector(0.,0.,1.848*cm), rotMid);
-    crystal2 = BuildCrystal(logicalWorld, G4ThreeVector(0.,6*cm,-1.75*cm), rot);
-    crystal3 = BuildCrystal(logicalWorld, G4ThreeVector(0.,-6.5*cm,-1.75*cm), rot);
+    crystal1 = BuildCrystal(logicalWorld, G4ThreeVector(0.,0.,1.848*cm), rotMid,1);
+    crystal2 = BuildCrystal(logicalWorld, G4ThreeVector(0.,6*cm,-1.75*cm), rot,2);
+    crystal3 = BuildCrystal(logicalWorld, G4ThreeVector(0.,-6.5*cm,-1.75*cm), rot,3);
 
     
     G4Box* casingSolid = new G4Box("casingSolid",1*cm,0.5*cm,0.025*cm); 
@@ -114,5 +114,18 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
 
 }
 
+void DetectorConstruction::ConstructSDandField(){
+        auto sdManager = G4SDManager::GetSDMpointer();
+    
+        // Create ONE SD that can handle multiple crystals
+        SensitiveDetector* bgoSD = new SensitiveDetector("BGOSD");
+        sdManager->AddNewDetector(bgoSD);
+    
+        // Attach SD to all 3 crystals
+        crystal1->SetSensitiveDetector(bgoSD);
+        crystal2->SetSensitiveDetector(bgoSD);
+        crystal3->SetSensitiveDetector(bgoSD);
+        
+};
 
 // Note: Epic simulation uses an additional DefineCrystalMV to create a logical volume slightly bigger to check overlaps

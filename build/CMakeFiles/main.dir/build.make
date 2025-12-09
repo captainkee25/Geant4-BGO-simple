@@ -125,10 +125,24 @@ CMakeFiles/main.dir/src/PhysicsList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/PhysicsList.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kumesh/geant4_projects/BGO_simple/src/PhysicsList.cc -o CMakeFiles/main.dir/src/PhysicsList.cc.s
 
+CMakeFiles/main.dir/src/RunAction.cc.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/RunAction.cc.o: /home/kumesh/geant4_projects/BGO_simple/src/RunAction.cc
+CMakeFiles/main.dir/src/RunAction.cc.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/RunAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/RunAction.cc.o -MF CMakeFiles/main.dir/src/RunAction.cc.o.d -o CMakeFiles/main.dir/src/RunAction.cc.o -c /home/kumesh/geant4_projects/BGO_simple/src/RunAction.cc
+
+CMakeFiles/main.dir/src/RunAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/RunAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kumesh/geant4_projects/BGO_simple/src/RunAction.cc > CMakeFiles/main.dir/src/RunAction.cc.i
+
+CMakeFiles/main.dir/src/RunAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/RunAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kumesh/geant4_projects/BGO_simple/src/RunAction.cc -o CMakeFiles/main.dir/src/RunAction.cc.s
+
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/kumesh/geant4_projects/BGO_simple/src/SensitiveDetector.cc
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/SensitiveDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/SensitiveDetector.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/SensitiveDetector.cc.o -MF CMakeFiles/main.dir/src/SensitiveDetector.cc.o.d -o CMakeFiles/main.dir/src/SensitiveDetector.cc.o -c /home/kumesh/geant4_projects/BGO_simple/src/SensitiveDetector.cc
 
 CMakeFiles/main.dir/src/SensitiveDetector.cc.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/main.dir/src/SensitiveDetector.cc.s: cmake_force
 CMakeFiles/main.dir/src/main.cc.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cc.o: /home/kumesh/geant4_projects/BGO_simple/src/main.cc
 CMakeFiles/main.dir/src/main.cc.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/main.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cc.o -MF CMakeFiles/main.dir/src/main.cc.o.d -o CMakeFiles/main.dir/src/main.cc.o -c /home/kumesh/geant4_projects/BGO_simple/src/main.cc
 
 CMakeFiles/main.dir/src/main.cc.i: cmake_force
@@ -159,6 +173,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/DetectorConstruction.cc.o" \
 "CMakeFiles/main.dir/src/ParticleSource.cc.o" \
 "CMakeFiles/main.dir/src/PhysicsList.cc.o" \
+"CMakeFiles/main.dir/src/RunAction.cc.o" \
 "CMakeFiles/main.dir/src/SensitiveDetector.cc.o" \
 "CMakeFiles/main.dir/src/main.cc.o"
 
@@ -169,6 +184,7 @@ main: CMakeFiles/main.dir/src/ActionInit.cc.o
 main: CMakeFiles/main.dir/src/DetectorConstruction.cc.o
 main: CMakeFiles/main.dir/src/ParticleSource.cc.o
 main: CMakeFiles/main.dir/src/PhysicsList.cc.o
+main: CMakeFiles/main.dir/src/RunAction.cc.o
 main: CMakeFiles/main.dir/src/SensitiveDetector.cc.o
 main: CMakeFiles/main.dir/src/main.cc.o
 main: CMakeFiles/main.dir/build.make
@@ -221,7 +237,7 @@ main: /opt/geant4/geant4-11-2-0/lib/libG4global.so
 main: /opt/geant4/geant4-11-2-0/lib/libG4clhep.so
 main: /opt/geant4/geant4-11-2-0/lib/libG4ptl.so.2.3.3
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kumesh/geant4_projects/BGO_simple/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

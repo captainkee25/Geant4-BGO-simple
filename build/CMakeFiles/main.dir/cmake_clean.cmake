@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/ParticleSource.cc.o.d"
   "CMakeFiles/main.dir/src/PhysicsList.cc.o"
   "CMakeFiles/main.dir/src/PhysicsList.cc.o.d"
+  "CMakeFiles/main.dir/src/RunAction.cc.o"
+  "CMakeFiles/main.dir/src/RunAction.cc.o.d"
   "CMakeFiles/main.dir/src/SensitiveDetector.cc.o"
   "CMakeFiles/main.dir/src/SensitiveDetector.cc.o.d"
   "CMakeFiles/main.dir/src/main.cc.o"

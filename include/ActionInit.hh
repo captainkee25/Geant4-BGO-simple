@@ -5,6 +5,8 @@
 
 #include "ParticleSource.hh"
 
+#include "RunAction.hh"
+
 class ActionInit : public G4VUserActionInitialization
 {
 public:
