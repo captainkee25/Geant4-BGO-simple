@@ -10,11 +10,12 @@ RunAction::RunAction()
         analysisManager->CreateH1(hname, "Energy deposit", 4096, 0., 2 * MeV);
     }
 
-    analysisManager->CreateNtuple("BGO", "BGO crystals");
+    analysisManager->CreateNtuple("BGO events", "BGO crystals");
     analysisManager->CreateNtupleIColumn("eventID");
     analysisManager->CreateNtupleIColumn("crystalID");          
-    analysisManager->CreateNtupleDColumn("EnergyDeposited");;
-    analysisManager->CreateNtupleDColumn("EntryTime");;  
+    analysisManager->CreateNtupleDColumn("EnergyDeposited");
+    analysisManager->CreateNtupleDColumn("EntryTime");  
+    analysisManager->CreateNtupleIColumn("TrackStopped");  
     analysisManager->FinishNtuple();
 }
 
@@ -23,18 +24,17 @@ RunAction::~RunAction(){}
 void RunAction::BeginOfRunAction(const G4Run *run)
 {
     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
+    analysisManager->SetNtupleMerging(true);
 
     G4int runID = run->GetRunID();
-    std::stringstream strRunID;
-    strRunID << runID;
 
-    analysisManager->OpenFile("EnergyHists" + strRunID.str() + ".root");
+    analysisManager->OpenFile("Readout.root");
 }
 
 void RunAction::EndOfRunAction(const G4Run *run)
 {
     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
-
+    
     analysisManager->Write();
     analysisManager->CloseFile();
     

@@ -1,13 +1,17 @@
+/run/numberOfThreads 3 
+
 /run/initialize
 
 /process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year
 
-/tracking/verbose 1
+/tracking/verbose 0
 
-/tracking/storeTrajectory 1
+#/tracking/storeTrajectory 1
 
-/control/execute vis.mac
+#/control/execute vis.mac
 
-/run/beamOn 8
+/run/printProgress 10 
+
+/run/beamOn 10000
 
 exit

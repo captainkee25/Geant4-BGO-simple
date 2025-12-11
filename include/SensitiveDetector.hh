@@ -28,6 +28,7 @@ private:
 
     G4double fEnergyDeposited[3];
     G4double fEntryTime[3];
+    G4bool fStopped[3];
 
 };
 

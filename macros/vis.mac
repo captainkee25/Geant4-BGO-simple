@@ -2,7 +2,7 @@
 /vis/open VRML2FILE 
 
 # Specify output filename
-#/vis/sceneHandler/vrml2FileName g4_myGeometry.wrl
+/vis/sceneHandler/vrml2FileName g4_myGeometry.wrl
 #
 # Disable auto refresh and quieten vis messages whilst scene and
 # trajectories are established:
