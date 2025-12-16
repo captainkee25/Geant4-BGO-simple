@@ -4,10 +4,18 @@ RunAction::RunAction()
 {
     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
     
+    // true energy hists
     for (int i = 0; i<3;++i)
     {
         G4String hname = "Edep BGO" + std::to_string(i+1); 
-        analysisManager->CreateH1(hname, "Energy deposit", 4096, 0., 2 * MeV);
+        analysisManager->CreateH1(hname, "Energy deposit", 4096, 0., 2.5 * MeV);
+    }
+
+    // smeared energy hists
+    for (int i = 0; i < 3; ++i)
+    {
+        G4String hname = "Edep_BGO_smeared" + std::to_string(i+1); 
+        analysisManager->CreateH1(hname, "Smeared energy deposit", 4096, 0., 2.5 * MeV);
     }
 
     analysisManager->CreateNtuple("BGO events", "BGO crystals");
@@ -16,6 +24,7 @@ RunAction::RunAction()
     analysisManager->CreateNtupleDColumn("EnergyDeposited");
     analysisManager->CreateNtupleDColumn("EntryTime");  
     analysisManager->CreateNtupleIColumn("TrackStopped");  
+    analysisManager->CreateNtupleDColumn("SmearedEnergy");  
     analysisManager->FinishNtuple();
 }
 

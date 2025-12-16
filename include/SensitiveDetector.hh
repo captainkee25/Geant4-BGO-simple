@@ -8,6 +8,8 @@
 #include "G4Track.hh"
 #include "G4HCofThisEvent.hh"
 
+#include "Randomize.hh"
+
 #include "G4RunManager.hh"
 #include "G4AnalysisManager.hh"
 

@@ -51,10 +51,24 @@ void SensitiveDetector::EndOfEvent(G4HCofThisEvent *)
         analysisManager->FillNtupleDColumn(2, E);
         analysisManager->FillNtupleDColumn(3, t);
         analysisManager->FillNtupleIColumn(4,s); 
-        analysisManager->AddNtupleRow();       
+
+        const G4double relResolution = 0.10;  // 10%
+
+        G4double Esmeared = 0.0;
+
+        if (E > 0.) {
+        G4double sigma = relResolution * E;
+        Esmeared = G4RandGauss::shoot(E, sigma);
+        Esmeared = std::max(0.0, Esmeared); 
         
-        if (fEnergyDeposited[i] > 0.)  // only plot hits
-            analysisManager->FillH1(i, fEnergyDeposited[i]);
+        analysisManager->FillNtupleDColumn(5,Esmeared);}
+        
+        analysisManager->AddNtupleRow();       
+
+
+        if (fEnergyDeposited[i] > 0.){  // only plot hits
+        analysisManager->FillH1(i, fEnergyDeposited[i]);
+        analysisManager->FillH1(i+3, Esmeared);}
         
     }   
 }
