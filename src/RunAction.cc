@@ -18,6 +18,22 @@ RunAction::RunAction()
         analysisManager->CreateH1(hname, "Smeared energy deposit", 4096, 0., 2.5 * MeV);
     }
 
+
+    // Coincidences 511
+    for (int i = 1; i < 3; ++i)
+    {
+        G4String hname = "Edep_BGO_coincidence_511" + std::to_string(i+1); 
+        analysisManager->CreateH1(hname, "Smeared energy deposit", 4096, 0., 2.5 * MeV);
+    }
+
+    // Coincidences 1275
+    for (int i = 0; i < 3; ++i)
+    {
+        G4String hname = "Edep_BGO_coincidence_1275" + std::to_string(i+1); 
+        analysisManager->CreateH1(hname, "Smeared energy deposit", 4096, 0., 2.5 * MeV);
+    }
+
+
     analysisManager->CreateNtuple("BGO events", "BGO crystals");
     analysisManager->CreateNtupleIColumn("eventID");
     analysisManager->CreateNtupleIColumn("crystalID");          

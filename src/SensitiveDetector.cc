@@ -40,6 +40,9 @@ void SensitiveDetector::EndOfEvent(G4HCofThisEvent *)
 {
     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
     G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+    G4double Esmeared[3] = {0., 0., 0.}; //Added this because need it to save for event coincidence
+
     for(int i=0; i<3; ++i) 
     {
         G4double E = fEnergyDeposited[i];
@@ -54,21 +57,47 @@ void SensitiveDetector::EndOfEvent(G4HCofThisEvent *)
 
         const G4double relResolution = 0.10;  // 10%
 
-        G4double Esmeared = 0.0;
-
         if (E > 0.) {
         G4double sigma = relResolution * E;
-        Esmeared = G4RandGauss::shoot(E, sigma);
-        Esmeared = std::max(0.0, Esmeared); 
+        Esmeared[i] = G4RandGauss::shoot(E, sigma);
+        Esmeared[i] = std::max(0.0, Esmeared[i]); 
         
-        analysisManager->FillNtupleDColumn(5,Esmeared);}
+        analysisManager->FillNtupleDColumn(5,Esmeared[i]);}
         
         analysisManager->AddNtupleRow();       
 
 
         if (fEnergyDeposited[i] > 0.){  // only plot hits
         analysisManager->FillH1(i, fEnergyDeposited[i]);
-        analysisManager->FillH1(i+3, Esmeared);}
+        analysisManager->FillH1(i+3, Esmeared[i]);}}
+    
         
-    }   
+    G4bool isCoincidence511 = false;
+    if(fEnergyDeposited[0] > 0)  
+    {G4double t1 = fEntryTime[0];
+    if((fEnergyDeposited[1] > 0. && fEntryTime[1] - t1 < 1.5*microsecond)||
+        (fEnergyDeposited[2] > 0. && fEntryTime[2] - t1 < 1.5*microsecond))
+        {isCoincidence511 = true;}}
+    
+    if(isCoincidence511)
+        {
+            analysisManager->FillH1(6, Esmeared[1]); // BGO2 coincidence
+            analysisManager->FillH1(7, Esmeared[2]); // BGO3 coincidence
+        }
+
+            
+    G4bool isCoincidence1275 = false;
+    if(fEnergyDeposited[0] > 1*MeV)  
+    {G4double t1 = fEntryTime[0];
+    if((fEnergyDeposited[1] > 0. && fEntryTime[1] - t1 < 1.5*microsecond)||
+        (fEnergyDeposited[2] > 0. && fEntryTime[2] - t1 < 1.5*microsecond))
+        {isCoincidence1275 = true;}}
+        
+    if(isCoincidence1275)
+        {
+            analysisManager->FillH1(8, Esmeared[0]);
+            analysisManager->FillH1(9, Esmeared[1]); // BGO2 coincidence
+            analysisManager->FillH1(10, Esmeared[2]); // BGO3 coincidence
+        }
+
 }

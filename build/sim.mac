@@ -1,4 +1,4 @@
-/run/numberOfThreads 3 
+/run/numberOfThreads 6 
 
 /run/initialize
 
@@ -10,7 +10,7 @@
 
 #/control/execute vis.mac
 
-/run/printProgress 10 
+/run/printProgress 100000 
 
 /run/beamOn 1000000
 
