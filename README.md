@@ -1,8 +1,8 @@
 Quick Geant4 simulation that was used during the testing stages of BGO QDC/TDC calibration for the ECAL upgrade of Positronium 1s-2s measurements 2025. The geometry mimics the 3-BGO setup used, where the central crystal was used as the trigger. 
 
-Particle Source: Na-22 radioactive atom produced at rest, and forced to decay, encapsulated in a small plastic casing
-Detector constructor: three hexagonal prism-shaped BGO crystals, surrounding the source in a triangular format (see screenshots below). These were implemented as Sensitive Detectors that saved energy deposited and the time of entry per event
-Physics List: G4EmStandardPhysics_option4, G4RadioactiveDecayPhysics, G4DecayPhysics())
+- Particle Source: Na-22 radioactive atom produced at rest, and forced to decay, encapsulated in a small plastic casing
+- Detector constructor: three hexagonal prism-shaped BGO crystals, surrounding the source in a triangular format (see screenshots below). These were implemented as SensitiveDetectors that saved energy deposited and the time of entry per event
+- Physics List: G4EmStandardPhysics_option4, G4RadioactiveDecayPhysics, G4DecayPhysics())
 
 *Readout.root saves:*
 1. A master n-tuple of: event number, BGO copy number, "true" energy deposit (including zeros), timing information (from start of event), and a boolean of whether the track was stopped in the BGO or not. The energies are then smeared with a Gaussian distribution of an energy-dependent resolution, and this "smeared energy" is saved in the last column
